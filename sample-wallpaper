@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 # Usage - ./sample-wallpaper | osascript
+# Run from the wallpaper folder
 
 picture = File.absolute_path Dir.entries(".").select{|f| f.match(".jpg") }.sample
 puts "tell application \"System Events\" to set picture of every desktop to \"#{picture}\""
